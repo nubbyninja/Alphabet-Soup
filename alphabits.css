@@ -1,0 +1,1003 @@
+
+:root {
+    --purpleTone: #9146ff;
+    --blueTone: #4285F4;
+    --redTone: #DB4437;
+    --yellowTone: #F4B400;
+    --greenTone: #0F9D58;
+    --whiteTone: #ffffff;
+    --primaryArea: #111;
+    --midTone: #222;
+    --highlights: #333;
+    --textTitleColor: #fff;
+    --textDescColor: #dcdcdc;
+    
+}
+body {
+    background: var(--midTone);
+}
+.WindowsTitleBar-container{
+    background: linear-gradient(
+            to right,
+            var(--redTone) 30%,
+            var(--greenTone) 30%,
+            var(--greenTone) 50%,
+            var(--yellowTone) 50%,
+            var(--yellowTone) 75%,
+            var(--blueTone) 75%
+    );
+
+
+    -webkit-animation: animateLogo 10s infinite linear;
+}
+
+/*.Scrollable-container.SidebarWrapper-container.SidebarWrapper-container-collapsed.PageSidebarWrapper-container.PageSidebarWrapper-container-tabs.PageSidebar-container,
+.Scrollable-container.SidebarWrapper-container.SidebarWrapper-container-collapsed.PageSidebarWrapper-container.PageSidebar-container 
+{ display: none; }*/
+
+/*.SidebarUsersRoleInfo-container.TeamPageSidebarMembers-roles:last-child { display: none; }*/
+
+/*.ChannelWrapper-container-with-sidebar*/
+.ChannelActivityDisplay-container{
+    background: var(--highlights);
+}
+.ChannelActivityDisplay-group-header{
+    background: none;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.ChannelActivityDisplay-item{
+    background: var(--midTone);
+}
+/* .ChannelWrapper-contents { padding-right: 0; } */
+
+.GH1-container{
+    /*border: 3px solid red;*/
+}
+
+.ChatChannelMessagesList-messages{background: var(--highlights);}
+/* Buttons & Branding */
+.LogoAndWordmarkV2-container-theme-light { 
+    fill: var(--whiteTone);
+    margin-top:0 !important;
+    padding: 0;
+    width:100%;
+    height: 20px;
+    padding: 2px;
+    /*background: linear-gradient(*/
+    /*    to right,*/
+    /*    var(--redTone) 30%,*/
+    /*    var(--greenTone) 30%,*/
+    /*    var(--greenTone) 50%,*/
+    /*    var(--yellowTone) 50%,*/
+    /*    var(--yellowTone) 75%,*/
+    /*    var(--blueTone) 75%*/
+    /*);*/
+    
+    
+    /*-webkit-animation: animateLogo 10s infinite linear;*/
+}
+@-webkit-keyframes animateLogo {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+.ChatChannelAlertBar-container:not(.ChatChannelAlertBar-container-banner){
+    background: var(--yellowTone);
+    filter:brightness(50%);
+}
+.TeamNavHeader-follow-and-apply-control, .TeamNavHeader-header-buttons { bottom: 10px; }
+.TeamNavHeaderRowButton-container { background: none; border: 1px solid var(--blueTone); border-radius: 20px; transition: background-color, border-color 320ms ease-out; }
+.TeamNavHeaderRowButton-container:hover { border-color: white; }
+.TeamNavHeader-content{
+    /*background: rgba(34, 34, 34, 0.49);*/
+    background: var(--highlights);
+    background-image: linear-gradient(to right, #00000000 0%, #ffffff20 20%, #ffffff20 40%, #00000000 100%);
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: relative;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: placeholderShimmer;
+    -webkit-animation-timing-function: linear;
+    
+}
+.TeamNavHeader-content::after{
+    backdrop-filter: invert(80%);
+    /*backdrop-filter: blur(80%);*/
+    /*backdrop-filter:hue-rotate(30deg);*/
+
+}
+
+@-webkit-keyframes placeholderShimmer {
+    0% {
+        background-position: -500px -0px;
+    }
+
+    100% {
+        background-position: 500px 0px;
+    }
+}
+.TeamNavHeaderRowButton-container:not(.TeamNavHeaderRowButton-container-disabled)::after { border-radius: 20px; }
+.FormConfirmButtonV2-container.FormConfirmButtonV2-container-type-bleached { border-color: var(--blueTone); border-radius: 20px; }
+.FormConfirmButtonV2-container.FormConfirmButtonV2-container-type-gilded{
+    background-image: linear-gradient(to top, var(--redTone), #ff8686);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    box-shadow: 0 0 6px 0 rgb(var(--redTone) / 50%);
+    border: solid 1px var(--redTone);
+}
+.FormConfirmButtonV2-container.FormConfirmButtonV2-container-type-gilded:hover{
+    box-shadow: 0 0 100px 20px var(--blueTone);
+    filter: blur(50%);
+}
+.FormConfirmButtonV2-container.FormConfirmButtonV2-container-filled.FormConfirmButtonV2-container-disabled, .FormConfirmButtonV2-container.FormConfirmButtonV2-container-desktop.FormConfirmButtonV2-container-filled.FormConfirmButtonV2-container-disabled:hover{
+    background: var(--highlights);
+    border: 1px solid var(--highlights);
+}
+.FormConfirmButtonV2-container.FormConfirmButtonV2-container-filled.FormConfirmButtonV2-container-disabled .FormConfirmButtonV2-button-content{
+    color: grey;
+}
+.FormConfirmButtonV2-container { border-radius: 5px; }
+.UpdateApplicationButtons-button.UpdateApplicationButtons-decline-button { border-radius: 5px; }
+
+.OverviewWidgetItem-contents svg.icon-youtube { fill: var(--redTone); }
+.OverviewWidgetItem-contents svg.icon-twitter { fill: #1DA1F2; }
+.OverviewWidgetItem-contents svg.icon-switch { fill: var(--redTone); }
+.OverviewWidgetItem-contents svg.icon-bnet { fill: rgb(20, 142, 255); }
+.OverviewWidgetItem-contents svg.icon-xbox { fill: #107C10; }
+.OverviewWidgetItem-contents svg.icon-twitch { fill: var(--purpleTone); }
+.OverviewWidgetItem-contents svg.icon-steam { fill: var(--whiteTone); }
+.OverviewWidgetItem-contents svg.icon-roblox { fill: #00a2ff; }
+.OverviewWidgetItem-contents svg.icon-origin { fill: #f56c2d; }
+.OverviewWidgetItem-contents svg.icon-facebook { fill: #4267B2; }
+.SVGIcon-icon{
+    filter: drop-shadow(3px 2px 2px var(--primaryArea));
+}
+.SVGIconWithTooltip-container{
+    fill: var(--yellowTone);
+}
+.TransientMenuTrigger-container{
+    fill: var( --greenTone);
+}
+.ChannelHeaderActionButtons-menu-button, .ChannelHeaderActionButtons-more-options-button{
+    fill: var( --greenTone);
+    
+}
+.ChannelHeaderMoreOptionsMenu-header{
+    color: var(--blueTone);
+}
+.MarkRenderer-inline-code, .MarkRenderer-inline-code-v2{
+    background: var(--midTone);
+}
+/* Notification */
+
+.NavSelectorItem-container-orientation-vertical.NavSelectorItem-container-unread:before {
+    background-color: #df5353; 
+}
+
+.TeamChannelItemContents-container-unread:before { background-color: #ffe21c; border-radius: 10px; }
+.TeamChannelItemContents-container-unread .TeamChannelItemContents-name {
+    color: var(--redTone); 
+}
+.TeamNavMenuSections-unread-messages.TeamNavMenuSections-unread-messages-below { background: #df5353 !important; }
+.QuickActionBar-container{
+    background: var(--midTone);
+}
+.QuickActionBar-action, .QuickActionBar-container .QuickActionBar-overflow{
+    fill: var(--blueTone);
+}
+/* Text Styling */
+blockquote { font-size: 1.1em; }
+ol, ul { font-size: 1.1em; }
+.BlockQuoteContainerRenderer { border-radius: 10px; }
+.BlockQuoteLineRenderer { line-height: 1.5em; }
+.BlockQuoteLineRenderer:first-child:before { content: '\201C'; display: block; font-size: 3em; color: #F5C400; }
+.BlockQuoteLineRenderer:last-child:after { content: '\201D'; display: block; font-size: 3em; color: #F5C400; text-align: right; margin-bottom: -2.5%; margin-top: 2.5%; }
+.GuildedText-container-color-gilded1 {
+    color: #f2e186;
+}
+.GH1-container { font-size: 1.4em; line-height: 1.2em; }
+.HeadingSmallRenderer { font-size: 1.4em; line-height: 1.4em;}
+.TypingIndicator-container { background: #111820; }
+.LoadingAnimationMicro-container-dark .LoadingAnimationMicro-bar { background: #F5C400; }
+.LoadingAnimationMicro-bar { background: #F5C400; }
+.WordDividerLine-container-type-alert .WordDividerLine-line { background: #edd75c; }
+.WordDividerLine-container-word-style-chat .WordDividerLine-word {  color: white;}
+
+/* Text Editor */
+.SlateEditor-container-type-default:not(.SlateEditor-container-read-only) .SlateEditor-editor.SlateEditor-editor-unpadded { padding-left: 2.5%; padding-right: 2.5%; }
+.TeamThreadPostEditor-container {
+    border-radius: 10px;
+    background: var(--highlights);
+}
+@media (max-width: 1200px) {
+    .TeamThreadPostEditor-container-standalone { background: none; }
+}
+
+/* Guilded Staff */
+.PlayerCardProfilePicture-avatar[alt="Fii's avatar"],
+.PlayerCardProfilePicture-avatar[alt="Diana's avatar"],
+.PlayerCardProfilePicture-avatar[alt="Eli's avatar"],
+.PlayerCardProfilePicture-avatar[alt="Jocelyn's avatar"],
+.PlayerCardProfilePicture-avatar[alt="Ryan's avatar"],
+.PlayerCardProfilePicture-avatar[alt="Puddleglum's avatar"],
+.PlayerCardProfilePicture-avatar[alt="Jared | UpDownLeftDie's avatar"] {
+    border: 2px solid #F5C400;
+}
+
+.ProfileHoverCardV2Overlay-container {
+    border: 3px solid var(--yellowTone);
+    background: var(--primaryArea);
+}
+.ProfileHoverCardV2Overlay-container .ProfileHoverCardV2Overlay-action-menu{
+    background: var(--highlights);
+}
+.GoldenProgressBar-container-theme-dark{
+    background: var(--midTone)
+}
+.GoldenProgressBar-progress{
+    background: var(--redTone)
+}
+
+
+.ChatV2MessageHeader-avatar[alt="Fii's avatar"],
+.ChatV2MessageHeader-avatar[alt="Diana's avatar"],
+.ChatV2MessageHeader-avatar[alt="Eli's avatar"],
+.ChatV2MessageHeader-avatar[alt="Jocelyn's avatar"],
+.ChatV2MessageHeader-avatar[alt="Ryan's avatar"],
+.ChatV2MessageHeader-avatar[alt="Puddleglum's avatar"],
+.ChatV2MessageHeader-avatar[alt="Jared | UpDownLeftDie's avatar"] {
+    border: 2px solid #F5C400;
+}
+
+/* Navigation */
+.GroupSelector-container {
+    background-color: var(--primaryArea);
+    --border-color: #000; 
+}
+.GroupCard-contents{
+    background: var(--highlights);
+}
+.GroupSettingsPanel-container{
+    background: var(--midTone);
+}
+.TeamPageV2-nav { box-shadow: 5px 0px 15px 0px rgba(0, 0, 0, 0.50); }
+.TeamNavMenu-container {
+    background-color: var(--midTone); 
+}
+.Navbar-container { background-color: #111; --border-color: #111; }
+.SearchBarV2-container{
+    margin-left: 7px;
+    
+}
+.SearchBarV2-container.SearchBarV2-container-unfocused{
+    background: var(--primaryArea);
+    
+}
+.SearchBarV2-container.SearchBarV2-container-focused{
+    background: var(--highlights);
+}
+.GlobalSearchResults-container{
+    background: var(--highlights);
+}
+.GlobalSearchResults-none-text, .GlobalSearchResults-no-results
+{
+    background: var(--redTone);
+    color: var(--whiteTone);
+}
+.ScreenHeader-container { 
+    display:flex;
+    background-color: var(--midTone);
+    border-bottom: 3px solid var(--greenTone); 
+}
+.ScreenHeader-container::before {
+    content: "";
+    height: 1080px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left:-50%;
+    bottom: 0;
+    background-position:left;
+    background-image: linear-gradient(-10deg, #4285F4, #4285F4);
+    transform: skewY(10deg);
+    z-index: -20;
+}
+.ScreenHeader-icon-wrapper{
+    text-shadow: 2px 2px 3px #111111;
+}
+.ScreenHeader-name{
+    text-shadow: 1px 1px 4px #111;
+    
+}
+.ScreenHeader-description{
+    color: var(--textDescColor);
+    text-shadow: 1px 1px 2px #111;
+}
+.LayeredPageContent-content {
+    background-color:  #111111; 
+/*border: 3px solid red;*/
+}
+.PublishedPostPage-wrapper{
+    background:var(--midTone);
+}
+.SidebarWrapper-container { 
+    background-color: var(--highlights); 
+}
+
+.SimpleIconTabMenu-container
+{
+    margin-top: 10px;
+    background-color: var(--highlights);
+}
+.SimpleIconTabMenuHeaderItem-container
+{
+    background: var(--midTone);
+}
+.SidebarInfoItem-container {
+    background-color: var(--midTone); 
+}
+.ChatChannelList-container { background: #000; --border-color: #000; }
+.ChatChannelListItem-container {
+    border-radius: 5px;
+    background: var(--midTone);
+}
+.ChatChannelListItem-container-selected{
+    background: var(--highlights);
+}
+
+.ChatChannelListItem-container-selected .ChatChannelListItem-remove-icon{
+    background: var(--redTone);
+    border-radius: 5px;
+}
+.ChatChannelListItem-container:not(.ChatChannelListItem-container-selected):hover{
+    background:var(--highlights);
+}
+.ChatChannelListItem-container:not(.ChatChannelListItem-container-selected):hover .ChatChannelListItem-remove-icon{
+    background: var(--redTone);
+    border-radius: 5px;
+}
+.ChatChannelContents-container { background: #111820; }
+.Scrubber-handle-wrapper .Scrubber-handle {
+    background: var(--blueTone); 
+}
+.Scrubber-handle-wrapper:hover .Scrubber-handle{
+    background: var(--greenTone);
+}
+.UserBasicInfoDisplay-secondary { margin-top: 0; }
+
+/* Settings */
+.OptionsMenu-container-desktop .OptionsMenu-options-control { background: #1a1a1a; }
+.OptionsMenuPageWrapper-container { background: #111111; }
+.ModalHeaderV2-container{
+    background: var(--highlights);
+}
+.ModalV2-container { background: var(--midTone); }
+
+/* Profile */
+.WebAppV2-sidebar { background: #000; }
+.WebbAppV2-minimal-nav-sidebar-has-title-bar{
+    background: var(--primaryArea);
+    
+}
+AppV2-micro-scrollbar{
+    fill: red;
+    background: red;
+    border: red;
+}
+.StatusMessage-container-persistent.StatusMessage-container-type-info{
+    border: 1px solid var(--highlights);
+    background: var(--midTone);
+}
+.StatusMessage-link, .StatusMessage-link:hover, .StatusMessage-link:visited, .StatusMessage-link:active, .StatusMessage-link:focus{
+    color: var(--greenTone);
+}
+.WebAppV2-shared-footer {
+    background: var(--highlights);
+    border-radius: 0px 5px 5px 0px;
+}
+.NavV4SectionSidebar-container { background: #000; }
+.NavV4Footer-right{
+    background: var(--midTone);
+}
+.NavV4Sidebar-sidebar-footer{
+    background: var(--midTone);
+}
+.NavV4Footer-footer-content{
+    background: var(--midTone);
+}
+.NavV4SelectorRow-container:hover{
+    border-left: 10px solid var(--greenTone);
+}
+.NavV4SelectorRow-container-unread:before{
+    background: linear-gradient(
+            to right,
+            var(--redTone) 30%,
+            var(--yellowTone) 60%,
+            var(--blueTone) 90%
+    );
+    -webkit-animation: animateLogo 100s infinite linear;
+    background-size: 1000%;
+    width: 12px;
+    height: 12px;
+    top: calc(50% - 6px);
+    border: 3px solid var(--greenTone);
+}
+.NavV4FooterGlobalContextDisplay-teams-wrapper{
+    background: var(--midTone);
+}
+.UserProfileV3-container {
+    background: var(--primaryArea); 
+}
+.UserProfilePostPanel-container { background: var(--primaryArea); border-radius: 10px; border: none;}
+
+.UserGameSummaryCard-container {
+    background: var(--midTone); 
+}
+.UserInfoSummaryItem-label{
+    color: var(--whiteTone);
+}
+
+.PlayerCard-container { background: #0A1017; }
+.PlayerAliasCard-container-type-game .PlayerAliasCard-info { background: #0A1017; }
+.PlayerAliasCard-container-type-game { background: #0A1017; }
+
+/* Overview */
+.TeamPlaqueV2-team-name { font-size: 1.8em; }
+.TeamOverviewRoot-description { line-height: 1.6em; }
+.OverviewWidgetItem-text-paragraph { line-height: 1.6em; }
+.TeamOverviewContentItemCard-container {
+    border-radius: 10px;
+    background: var(--midTone);
+}
+.OverviewWidgetItemWrapper-container-type-filled {
+    border-radius: 10px; 
+    background: var(--midTone); 
+}
+.TeamOverviewLeaderboardSection-leaderboard-container {
+    background: var(--highlights);
+    border-radius: 10px; 
+}
+.CarouselList-controls-arrow {
+    fill: var(--blueTone); 
+}
+.CarouselList-container-size-sm .CarouselList-blur-light.CarouselList-right-blur {
+    background: linear-gradient(to right, rgba(55,57,67,0), var(--primaryArea) 75%); 
+}
+.CarouselList-container-size-sm .CarouselList-blur-light.CarouselList-left-blur {
+    background: linear-gradient(
+            to left, rgba(55,57,67,0), var(--primaryArea) 75%
+    );
+}
+
+.DraftInputWithTitleV2-container { border-radius: 10px; }
+.PostDisplayV2-container { border-radius: 10px; }
+.MediaRenderer-content { border-radius: 10px; }
+.MediaSplitView-media{
+    background: var(--primaryArea);
+}
+.BackLink-container-size-lg .BackLink-icon{
+    fill: var(--blueTone);
+}
+/* Forums */
+.TeamPostRow-container {
+    background: var(--midTone);
+    border-radius: 5px; 
+}
+.TeamPostRow-container-unread:before { background: var(--redTone); }
+.TeamPostRow-container-unread .TeamPostRow-title { color: var(--greenTone); }
+.TeamThreadReplyCreator-unexpanded-wrapper { border-radius: 10px; }
+.ReplyPanel-container-viewing{
+    background: var(--midTone);
+}
+.Editor-container {
+    border-radius: 10px;
+    background: var(--midTone);
+}
+.SlateToolbarIcon-wrapper:hover .SlateToolbarIcon-icon{
+    fill: var(--redTone);
+}
+.SlateToolbarIcon-icon{
+    fill: var(--blueTone);
+}
+.SlateToolbarMenuIcon{
+    fill: var(--blueTone);
+    
+}
+.SlateToolbarMenuIcon *:hover .SlateToolbarMenuIcon-carat,.SlateToolbarMenuIcon *:hover .SlateToolbarMenuIcon-icon{
+    fill: var(--redTone) !important;
+}
+.SlateToolbarMenuIcon-carat{
+    fill: var(--yellowTone);
+}
+.TeamThreadPostPanel-container { border-radius: 10px; margin-bottom: 1.5%; }
+.TeamThreadPostPanelDisplay-container {
+    background: var(--midTone);
+    border-radius: 10px; 
+}
+
+/* Docs */
+.DocDisplayItem-container {
+    border-radius: 10px;
+    background: var(--highlights);
+}
+.DocDisplayItem-container::after { border-radius: 10px; }
+.DocSummaryInfo-container {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--midTone);
+}
+.DocEditor-container .DocEditor-content-input{
+    background: var(--midTone);
+}
+div[data-id="DocItem"] .ActionMenu-section.ActionMenu-section:last-child .ContextMenuItem-label { color: #df5353; }
+.ContextMenu-content{
+    fill: var(--greenTone);
+}
+.icon-trash { fill: #df5353; }
+
+/* Calendar */
+/*.TeamEventDetails-container { background: #0A1017; border-radius: 10px; }
+.TeamEventDetails-metadata div { border-radius: 0; }
+.TeamEventStatus-container.TeamEventDetails-status { border-top-left-radius: 10px; border-top-right-radius: 10px; }
+.PostMetadata-container.PostMetadata-container-size-md.TeamEventDetails-post-metadata { border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }*/
+
+/* Stream Channel */
+.StreamChannel-contents { flex-direction: column; }
+.StreamChannelDisplay-container.StreamChannel-display {
+    min-height: initial; 
+    background: var(--primaryArea);
+}
+.ChatChannelContents-container.StreamChannel-chat.StreamChannel-chat-with-streams { max-width: 100%; }
+
+/* Embeds */
+.ContentEmbedCard-container { height: auto; }
+.ChatEmbedsRenderer-embed { max-width: 480px; }
+.ContentEmbedCardStack-container-small-cards .ContentEmbedCardStack-content-embed-card,
+.ContentEmbedCardStack-container .ContentEmbedCardStack-external-embed-card {
+    min-width: 480px;
+    max-width: 480px;
+}
+.MaximizedImageOverlay-container .MaximizedImageOverlay-open-original{
+    color: var(--blueTone);
+}
+.MaximizedImageOverlay-share-icon{
+    fill: var(--yellowTone);
+}
+.MaximizedImageOverlay-download-icon{
+    fill: var(--greenTone);
+}
+.SkeletonPlaceholder-container-no-children{
+    background: var(--midTone);
+}
+.OpenGraphEmbedContent-container { height: auto; }
+.OpenGraphEmbedImage-container-playable:before { border-radius: 10px; }
+.OpenGraphEmbed-content {
+    border-left: 4px solid #F5C400;
+    border-radius: 10px;
+    background: var(--primaryArea);
+}
+.OpenGraphEmbedContent-container::after{
+    background: var(--highlights);
+}
+
+.OpenGraphEmbedContent-domain { font-size: 1em; }
+.OpenGraphEmbedContent-title{ font-size: 1.1em; margin-bottom: 2.5%; }
+.OpenGraphEmbedContent-description {
+    font-size: 1em;
+    max-height: 75px;
+    -webkit-line-clamp: 3;
+    line-height: 1.6em;
+}
+
+.OpenGraphEmbedImage-container {
+    position: relative;
+    display: flex;
+    margin-left: 0; 
+    width: 150px;
+    height: 113px;
+    max-width: 150px;
+    max-height: 113px;
+    margin-left: 2.5%;
+}
+
+.OpenGraphEmbedImage-image {
+    width: 150px;
+    height: 113px;
+    max-width: 150px;
+    max-height: 113px;
+    border-radius: 10px;
+    object-fit: cover;
+    background: #111820;
+}
+
+.ChatEmbed-container {
+    border-radius: 10px;
+    background: var(--midTone);
+}
+.ChatEmbedsRenderer-container { line-height: 1.6em; }
+.ChatEmbedContent-image { border-radius: 10px; }
+.ChatEmbedFooter-container { border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
+
+.TeamEmbedCard-info-wrapper { margin: 2.5% 0; }
+
+.DefaultContentEmbedCard-content-wrapper { border-radius: 10px; }
+.DefaultReadonlyEditableForm-container {
+    padding: 24px 0px;
+    margin: 0px 24px;
+    background-color: #333333;
+    border-radius: 1em;
+    max-width: 550px;
+}
+.TeamListItemWrapper-container{
+    background: var(--highlights);
+}
+.TeamListItemIndentWrapper-container{
+    background: var(--primaryArea);
+}
+.CheckmarkIcon-container-selected .CheckmarkIcon-circle{
+    background: var(--greenTone);
+}
+.CheckmarkIcon-circle{
+    border-width: 3px;
+    border-style: dotted;
+}
+.CustomFormWrapper-container-standalone{
+    background: var(--highlights);
+}
+.ContentEmbedCardFooter-container { border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
+
+/* Chat Message */
+.ChatChannelInput-no-permissions{
+    background: var(--redTone);
+    color: var(--whiteTone);
+}
+.ChatChannelInput-container .ChatChannelInput-editor { 
+    border-radius: 25px;
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.25);
+    background:var(--primaryArea);   
+}
+ .ChatChannelInput-editor{ 
+     /*border: 3px solid red;*/
+     box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+     transition: all 0.3s ease-in-out 0s;
+     cursor: pointer;
+     outline: none;
+     position: relative;
+     padding: 10px;
+ }
+.ChatChannelInput-editor::before {
+    content: '';
+    border-radius: 20px;
+    /*min-width: calc(500px + 12px);*/
+    /*min-height: calc(60px + 12px);*/
+    border: 6px solid #0F9D58;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+    display:flex;
+    width: 100%;
+    height: 100%;
+}
+.ChatChannelInput-editor:hover,  .ChatChannelInput-editor:focus{
+    color: #313133;
+    transform: translateY(-6px);
+}
+.ChatChannelInput-editor:hover::before,  .ChatChannelInput-editor:focus::before{
+    opacity: 1;
+}
+.ChatChannelInput-editor::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #0F9D58;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 3s infinite;
+}
+.ChatChannelInput-editor:hover::after, .ChatChannelInput-editor:focus::after {
+    animation: none;
+    display: none;
+}
+@keyframes ring {
+    0% {
+        width: 3px;
+        height: 3px;
+        opacity: .6;
+    }
+    100% {
+        width: 1000px;
+        height: 1000px;
+        opacity: 0;
+    }
+}
+
+
+
+.ChatChannelInput-container{ 
+    background-color: var(--highlights);
+}
+.ChatChannelInput-container-inline-replying .ChatChannelInput-editor { border-radius: 0 0 10px 10px !important; }
+.ChatChannelInputStatusBar-container {
+    height: 50px;
+    border-radius: 10px 10px 0px 0px; 
+}
+
+/*ChatChannelInputTypingIndicator-loading LoadingAnimationMicro-container*/
+.RichPresence-container{
+    background-color: var(--greenTone) !important;
+    
+}
+.TransientMenu-container-style-default
+{
+    background-color: var(--highlights);
+}
+
+.ChatChannelInputTypingIndicator-loading LoadingAnimationMicro-container{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: solid transparent 1px;
+    border-top: solid red 1px;
+    border-left: solid red 1px;
+    animation: chatSpinner 2s linear infinite;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*margin-top: 15px;*/
+}
+.ChatChannelInputTypingIndicator-container:before {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border: solid transparent 10px;
+    border-top: solid yellow 10px;
+    border-left: solid yellow 10px;
+    border-radius: 50%;
+    animation: chatSpinnerBefore 1.5s linear infinite;
+}
+.ChatChannelInputTypingIndicator-container:after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: solid transparent 10px;
+    border-top: solid yellow 10px;
+    border-left: solid yellow 10px;
+    border-radius: 50%;
+    animation: chatSpinnerAfter 1.5s linear infinite;
+}
+@keyframes chatSpinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes chatSpinnerBefore {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes chatSpinnerAfter {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.ParagraphRenderer { font-size: 1.1em; line-height: 1.5em; }
+.ParagraphRenderer-only-reaction { font-size: 3em; }
+/*.ReactionRenderer { font-size: 1.05em; }*/
+.ReactionPickerNavbar-container{
+    background:var(--midTone);
+}
+.ReactionPickerNavbarItem-active{
+    border-bottom:3px solid var(--blueTone);
+}
+.ReactionPickerButton-icon { fill: var(--greenTone); }
+.ReactionPicker-container { border-radius: 10px; }
+.ReactionPicker-content{
+    background:var(--primaryArea);
+}
+.ReactionPickerFooter-container{
+    background: var(--midTone);
+}
+.SelectMenu-container{
+    background: var(--highlights);
+}
+.SelectMenuItem-container-selected{
+    background: var(--redTone);
+}
+.ReactionBadge-container-content { background: rgba(54,54,61,0.5); }
+
+.UserStatusIcon-icon { width: 22px; height: 22px; }
+.UserSettingsServerSubscriptionsUpsell-container{
+    background: var(--midTone);
+}
+.FullScreenFlowStageWrapper-contents-wrapper{
+    background: var(--midTone);
+}
+.ServerSubscriptionBar-container{
+    
+    background: var(--midTone);
+}
+.ServerSubscriptionsSectionAdminHasSetup-earnings{
+    background: var(--midTone);
+}
+.ServerSubscriptionsInviteUpsell-container{
+    background: var(--midTone);
+}
+.CopyableTextbox-container{
+    background: var(--primaryArea);
+}
+.ServerSubscriptionsTierUpsellCard-header{
+    background: var(--highlights);
+}
+.ServerSubscriptionsTierUpsellCard-body{
+    background: var(--midTone);
+}
+.ServerSubscriptionsRecentActivityFeed-empty-wrapper{
+    background: var(--midTone);
+}
+.ServerSubscriptionsReports-earnings-wrapper{
+    background: var(--highlights);
+}
+.ServerSubscriptionsSettings-container{
+    background: var(--highlights);
+}
+.ServerSubscriptionsManageTierSettingsCard-container{
+    background: var(--highlights);
+}
+
+.UserCTAPanel-container{
+    background: var(--midTone);
+}
+.ItemChooserItemWrapper-container{
+    background: var(--highlights);
+}
+.ItemChooserItemWrapper-container:hover{
+    background: var(--primaryArea);
+}
+.ItemManagerFilterWrapper-container{
+    background: var(--highlights);
+}
+.GuildedText-container-type-subtext2{
+    color: var(--redTone);
+}
+.PersistentUpsell-container-flavor-settings{
+    background: var(--midTone);
+}
+.RadioOptionPanel-container{
+    background: var(--midTone);
+}
+.RadioOptionPanel-container-selected{
+    background: var(--highlights);
+}
+.CheckboxV2-container-checked .CheckboxV2-box{
+    background: var(--greenTone);
+}
+.CardWrapper-container{
+    background: var(--midTone);
+}
+.FormSection-container-section-background-inset{
+    background: var(--midTone);
+}
+.SwitchInput-tab{
+    background: radial-gradient(var(--whiteTone) 1%,var(--primaryArea) );
+    border: 2px solid var(--primaryArea);
+    box-shadow: black 0px 0px 5px;
+    
+}
+.ItemKeybindInput-container
+{
+    background: var(--midTone);
+}
+.SwitchInput-slide{
+    background: var(--redTone);
+}
+.SwitchInput-container-on .SwitchInput-slide{
+    background: var(--greenTone);
+}
+.ChatV2MessageTimestamp-container { font-size: 0.8em; }
+.ChatV2MessageHeader-name { font-size: 1.1em; }
+.ChatV2Message-header { margin-bottom: 6px; }
+.ChatV2Message-container:not(.ChatV2Message-container-editing):not(.ChatV2Message-container-replying):not(.ChatV2Message-container-private).ChatV2Message-container-mentioned::after{
+    background: var(--greenTone);
+}
+.ChatV2Message-container:not(.ChatV2Message-container-editing):not(.ChatV2Message-container-replying):not(.ChatV2Message-container-private).ChatV2Message-container-mentioned {
+    background: rgba(0, 255, 0, 0.2);
+    
+}
+.ChatV2Message-container:not(.ChatV2Message-container-editing):not(.ChatV2Message-container-replying):not(.ChatV2Message-container-private).ChatV2Message-container-mentioned:hover {
+    background: rgba(255, 255, 0, 0.28);
+}
+.ChatV2Message-container:not(.ChatV2Message-container-editing).ChatV2Message-container-replying{
+    background: rgba(0, 0, 0, 0.07);
+}
+.ChatV2Message-container:not(.ChatV2Message-container-editing).ChatV2Message-container-replying:hover{
+    background: rgba(0, 0, 0, 0.17);
+}
+.ChatV2Message-container:not(.ChatV2Message-container-editing).ChatV2Message-container-replying::after{
+    background: var(--blueTone);
+}
+.ChatV2Message-container:not(.ChatV2Message-container-editing):not(.ChatV2Message-container-threads-disabled):hover{
+    background: rgba(0, 0, 0, 0.47);
+}
+.ChatChannelInputStatusBar-container{
+    background: var(--midTone);
+}
+.PrivateReplyButton-icon{
+    fill: var(--yellowTone);
+}
+.ChatChannelInputStatusBarButtons-close-icon{
+    fill: var(--yellowTone);    
+}
+.ChatChannelInputStatusBar-replying-to-text{
+    color: var(--blueTone);
+}
+.TeamChannelItemContents-name{
+    color: var(--whiteTone);
+}
+.ChatMessageThread-container { border-radius: 10px; background: rgba(54,54,61,0.5); }
+.ChatMessageThread-thread-header { line-height: 1em; }
+
+/* Image message */
+.MediaInfoPane-container{
+    background: var(--midTone);
+}
+.MediaRenderer-wrapper { margin: 1% 0; }
+.MediaRenderer-content-editor-simple { border-radius: 10px; max-width: var(--max-chat-media-input-width); }
+.slate-margin-bottom-lg+.slate-margin-top-sm, .slate-margin-bottom-lg+.slate-margin-sm, .slate-margin-lg+.slate-margin-top-sm, .slate-margin-lg+.slate-margin-sm {
+    margin-top: 2.5%;
+}
+.MediaDisplayItemV3-container{
+    background: var(--highlights);
+}
+
+.DefaultContentEmbedCard-content-wrapper{
+    background: var(--highlights);
+}
+.slate-margin-top-lg, .slate-margin-lg { margin-top: 2.5%; }
+
+/* Channel */
+.TeamChannelItemContents-container { border-left: 2.5px solid transparent; border-radius: 0px; }
+.TeamChannelItemContents-container::after { border-radius: 0px; }
+.TeamChannelItemContents-name { font-size: 1.1em; }
+.TeamChannelItemContents-container-selected {
+/*background: linear-gradient(to left, #ffb400, #e4c519, #edd75c);*/
+background: var(--primaryArea);
+border-right: 6px solid var(--greenTone);
+border-radius: 0;
+}
+.TeamChannelItemContents-container-selected .ChannelIcon-icon-primary { /*fill: #111820;*/ fill: #fff; }
+.TeamChannelItemContents-container-selected .TeamChannelItemContents-name { /*color: #111820;*/ color: #fff; font-weight: bold; }
+.ChannelListHeader-container-type-category .ChannelListHeader-text { font-size: 1em; }
+.TeamNavSectionsList-header { font-size: 1em; }
+.TeamApplicationInlineLink-container{
+    background: var(--midTone);
+}
+/*.TeamThreadPostPanelDisplay-container { display: block; }*/
